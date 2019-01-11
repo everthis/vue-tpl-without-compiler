@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <!-- 引入外部或者公司内部框架或者库文件 -->
+    <!-- normalize.css用于normalize各个浏览器之间的默认样式差异，因为不同浏览器的默认样式不一致 -->
+    <link
+      rel="stylesheet"
+      href="http://stdl.qq.com/stdl/qb/lib/normalize-8.0.1.min.css"
+    />
+    <!-- inline CSS样式 -->
+    <style>
+      .c-center {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--[if lt IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <div id="app"></div>
+
+    <!-- 引入外部或者公司内部框架或者库文件 -->
+    <script src="https://stdl.qq.com/stdl/qb/lib/vue-2.5.17.min.js"></script>
+    <!-- Vue模版 -->
+    <script type="x-template" id="vue-tpl">
+      <div class="c-center">
+        <h3>{{ title }}</h3>
+        <p>点击次数：{{ clickCount }}</p>
+        <button name="button" @click="addCount">Click me(+1)</button>
+      </div>
+    </script>
+    <!-- Vue相关逻辑代码 -->
+    <script>
+      new Vue({
+        // 对应id为app的元素
+        el: "#app",
+        // 对应type为x-template，id为vue-tpl的script
+        template: "#vue-tpl",
+        data: () => {
+          return {
+            title: "inline",
+            clickCount: 0
+          };
+        },
+        computed: {},
+        methods: {
+          addCount() {
+            this.clickCount += 1;
+          }
+        },
+        mounted() {}
+      });
+    </script>
+  </body>
+</html>

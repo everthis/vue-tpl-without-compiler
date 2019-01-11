@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <!-- 引入外部或者公司内部框架或者库文件 -->
+    <!-- normalize.css用于normalize各个浏览器之间的默认样式差异，因为不同浏览器的默认样式不一致 -->
+    <link
+      rel="stylesheet"
+      href="http://stdl.qq.com/stdl/qb/lib/normalize-8.0.1.min.css"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <!--[if lt IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <div id="app"></div>
+
+    <!-- 引入外部或者公司内部框架或者库文件 -->
+    <script src="https://stdl.qq.com/stdl/qb/lib/vue-2.5.17.min.js"></script>
+    <script src="http://stdl.qq.com/stdl/qb/lib/zepto-1.2.0.min.js"></script>
+    <!-- Vue模版 -->
+    <script type="x-template" id="vue-tpl">
+      <div class="">
+        <div class="c-center">
+          <h3>withZepto</h3>
+          <button name="button" @click="xhrData">获取数据(click me)</button>
+        </div>
+        <pre>
+          <code>{{ users }}</code>
+        </pre>
+      </div>
+    </script>
+    <!-- Vue相关逻辑代码 -->
+    <script src="./index.js"></script>
+  </body>
+</html>

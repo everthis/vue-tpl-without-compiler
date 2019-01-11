@@ -1,0 +1,18 @@
+.c-center {
+  text-align: center;
+}
+.c-left {
+  text-align: left;
+}
+.c-margin {
+  margin: 10em 20em;
+}
+.c-no-border {
+  border: none;
+}
+.normal-li {
+  font-size: 12px;
+}
+.todo-li {
+  font-size: 14px;
+}
